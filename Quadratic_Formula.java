@@ -23,15 +23,16 @@ public class Quadratic_Formula
         
         //1
         System.out.println("Please enter your quadratic formula: ");
+        //println method is being invoked on the object referenced by System.out
+        //class- collection of variables and methods that is respoanisble for some funtion
         Scanner in = new Scanner(System.in);
         //new = new object using the Scanner constructor that takes in an InputStream
-        //System.in is a reference to that input stream
-
+        //System.in is a reference to that input strea
         String exp = in.nextLine();
         //nextline scans the input screen and returns the curent line as a string
+        
         //2
         parsingforABC(exp);
-        System.out.println("yes: " + exp);
         //3
         if(b*b - 4 * a * c < 0){
             System.out.println("You answer is an imaginary number");
