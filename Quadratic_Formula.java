@@ -48,16 +48,22 @@ public class Quadratic_Formula
         
         double bCoeff = Double.parseDouble(bStr);
         
-        exp = exp.substring(secondXPos + 1);
+        double cCoeff;
         
-        double cCoeff = Double.parseDouble(exp);
+        if(exp.charAt(exp.length() - 1) == 'x'){
+            cCoeff = 0;
+        }else{
+            exp = exp.substring(secondXPos + 1);
+        
+            cCoeff = Double.parseDouble(exp);
+        }
         
         //3
         if(bCoeff*bCoeff - 4 * aCoeff * cCoeff < 0){
             System.out.println("You answer is an imaginary number");
         }else{
-            double X1 = (- bCoeff + Math.sqrt(bCoeff*bCoeff - 4 * aCoeff * cCoeff))/ 2 * aCoeff;
-            double X2 = (- bCoeff - Math.sqrt(bCoeff*bCoeff - 4 * aCoeff * cCoeff))/ 2 * aCoeff;
+            double X1 = ((- bCoeff) + Math.sqrt((bCoeff*bCoeff) - (4 * aCoeff * cCoeff)))/ (2 * aCoeff);
+            double X2 = ((- bCoeff) - Math.sqrt((bCoeff*bCoeff) - (4 * aCoeff * cCoeff)))/ (2 * aCoeff);
          //4
             System.out.println("X1: " + X1);
             System.out.println("X2: " + X2);
